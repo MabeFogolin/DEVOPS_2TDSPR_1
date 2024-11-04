@@ -1,0 +1,14 @@
+services:
+  app:
+    image: nib-challenge
+    container_name: nib-api
+    working_dir: /app
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    networks:
+      - nib_network
+
+networks:
+  nib_network:
+    driver: bridge
