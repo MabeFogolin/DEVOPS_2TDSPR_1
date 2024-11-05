@@ -17,25 +17,56 @@
   
 </ul>
 
-<h2 align="left">Comandos para Rodar a Aplicação</h2>
-<ol>
-  <li>🔓 Acessar a VM: Como primeiro passo, é necessário acessar a Máquina Virtual.
-    <ol>
-      <li>⏯️ Iniciar um terminal PowerShell: Em seguida, inicialize o terminal e navegue até o diretório <code>NIB_challenge</code> para poder seguir os seguintes passos.
-        <ol>
-          <li><code>docker compose down --rmi all</code>: Derruba o ambiente Docker e remove todas as imagens relacionadas ao projeto.</li>
-          <li><code>docker build --tag nib-challenge .</code>: Constrói a imagem Docker com o nome <strong>nib-challenge</strong>.</li>
-          <li><code>docker compose up</code>: Inicia os contêineres do Docker definidos no <code>docker-compose.yml</code>.</li>
-          <li><code>Invoke-RestMethod -Uri http://localhost:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "92712116003", "nomeUser": "teste cpf", "sobrenomeUser": "Fogolin", "telefoneUser": 1234567890, "dataNascimentoUser": "1990-01-01", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'</code>: Realiza uma requisição POST para criar um novo usuário no sistema.</li>
-          <li><code>curl http://localhost:8080/usuario/todos</code>: Utiliza o comando <code>curl</code> para listar todos os usuários.</li>
-          <li><code>http://localhost:8080/usuario/todos</code>: URL para acessar diretamente todos os usuários cadastrados (utilize no navegador ou em outra ferramenta de requisição HTTP).</li>
-          <li><code>Invoke-RestMethod -Uri http://localhost:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "18724858048", "nomeUser": "Persistencia dados", "sobrenomeUser": "Nuvem", "telefoneUser": 1234567890, "dataNascimentoUser": "2024-11-04", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'</code>: Realiza uma segunda requisição POST para persistir dados de um novo usuário na nuvem.</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
+### Etapas e comandos para rodar a aplicação
 
+1. **Acessar a VM**
+```bash
+   Como primeiro passo, é necessário acessar a Máquina Virtual
+```
+
+2. **Iniciar um terminal PowerShell**
+```bash
+   Em seguida, inicialize o terminal e navegue até o diretório NIB_challenge para poder seguir os próximos passos
+```
+
+3. **Comando para derrubar o ambiente Docker e remover todas as imagens construídas para garantir que não haja interferências**
+
+```bash
+   docker compose down --rmi all
+```
+
+
+4. **Comando para construir uma imagem docker com o seguinte nome: nib-challenge**
+
+```bash
+   docker build --tag nib-challenge .
+```
+
+
+5. **Comando para iniciar os contêineres do Docker definidos no docker-compose.yml**
+
+```bash
+  docker compose up
+```
+
+6. **Comando para realizar uma requisição POST para criar um novo usuário no sistema**
+
+```bash
+  Invoke-RestMethod -Uri http://localhost:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "92712116003", "nomeUser": "teste cpf", "sobrenomeUser": "Fogolin", "telefoneUser": 1234567890, "dataNascimentoUser": "1990-01-01", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
+```
+***Atenção: Esta requisição gera o erro 409, indicando conflito pois já há um usuário cadastrado no banco de dados com o CPF informado***
+
+7. **Comando para listar todos os usuários**
+
+```bash
+  curl http://localhost:8080/usuario/todos
+```
+
+8. **Comando para realizar uma segunda requisição POST para persistir dados de um novo usuário na nuvem.**
+
+```bash
+  Invoke-RestMethod -Uri http://localhost:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "18724858048", "nomeUser": "Persistencia dados", "sobrenomeUser": "Nuvem", "telefoneUser": 1234567890, "dataNascimentoUser": "2024-11-04", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
+```
 
 
 <h2 align="left"> 🧑‍🤝‍🧑 Integrantes</h2>
