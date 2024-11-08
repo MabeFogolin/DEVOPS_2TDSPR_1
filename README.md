@@ -86,7 +86,7 @@
 ```bash
   docker compose up
 ```
-***Atenção: Aguarde o retorno da mensagem indicando a que aplicação foi inicializada***
+***Atenção: Aguarde o retorno da mensagem indicando a que aplicação foi inicializada e aba um novo terminal***
 
 6. **Comando para realizar uma requisição POST para criar um novo usuário no sistema**
 
