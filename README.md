@@ -20,6 +20,37 @@
 
 <h2 align="left">Etapas e comandos para rodar a aplicação
 
+### Etapas testando fora ambiente da máquina virtual
+
+1. **URL para buscar todos os usuários**
+
+```bash
+  http://20.57.136.155:8080/usuario/todos
+```
+
+2. **URL para buscar usuário específico**
+
+```bash
+  http://20.57.136.155:8080/usuario/cpf/89514594037
+```
+
+2. **JSON e URL para criar um novo usuário através do Postman**
+
+```bash
+  http://20.57.136.155:8080/usuario/criar
+
+{
+  "cpfUser": "98684948009",
+  "nomeUser": "Teste fora",
+  "sobrenomeUser": "Tchau VM",
+  "telefoneUser": 1234567890,
+  "dataNascimentoUser": "1990-01-01",
+  "planoUser": "Premium",
+  "emailUser": "maria.fogolin@example.com"
+}
+
+```
+
 ### Etapas acessando a máquina virtual
 
 
@@ -75,39 +106,6 @@
 ```bash
   Invoke-RestMethod -Uri http://20.57.136.155:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "18724858048", "nomeUser": "Persistencia dados", "sobrenomeUser": "Nuvem", "telefoneUser": 1234567890, "dataNascimentoUser": "2024-11-04", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
 ```
-
-### Etapas testando fora ambiente da máquina virtual
-
-1. **URL para buscar todos os usuários**
-
-```bash
-  http://20.57.136.155:8080/usuario/todos
-```
-
-2. **URL para buscar usuário específico**
-
-```bash
-  http://20.57.136.155:8080/usuario/cpf/89514594037
-```
-
-2. **JSON e URL para criar um novo usuário através do Postman**
-
-```bash
-  http://20.57.136.155:8080/usuario/criar
-
-{
-  "cpfUser": "98684948009",
-  "nomeUser": "Teste fora",
-  "sobrenomeUser": "Tchau VM",
-  "telefoneUser": 1234567890,
-  "dataNascimentoUser": "1990-01-01",
-  "planoUser": "Premium",
-  "emailUser": "maria.fogolin@example.com"
-}
-
-```
-
-
 
 <h2 align="left"> 🧑‍🤝‍🧑 Integrantes</h2>
 <ul>
