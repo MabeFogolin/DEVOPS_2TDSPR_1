@@ -25,19 +25,19 @@
 1. **URL para buscar todos os usuários**
 
 ```bash
-  http://20.57.136.155:8080/usuario/todos
+  http:/40.90.198.227:8080/usuario/todos
 ```
 
 2. **URL para buscar usuário específico**
 
 ```bash
-  http://20.57.136.155:8080/usuario/cpf/89514594037
+  http://40.90.198.227:8080/usuario/cpf/89514594037
 ```
 
 2. **JSON e URL para criar um novo usuário através do Postman**
 
 ```bash
-  http://20.57.136.155:8080/usuario/criar
+  http://40.90.198.227:8080/usuario/criar
 
 {
   "cpfUser": "98684948009",
@@ -91,20 +91,20 @@
 6. **Comando para realizar uma requisição POST para criar um novo usuário no sistema**
 
 ```bash
- Invoke-RestMethod -Uri http://20.57.136.155:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "89514594037", "nomeUser": "Persistencia dados", "sobrenomeUser": "Nuvem", "telefoneUser": 1234567890, "dataNascimentoUser": "2024-11-04", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
+ Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "89514594037", "nomeUser": "Persistencia dados", "sobrenomeUser": "Nuvem", "telefoneUser": 1234567890, "dataNascimentoUser": "2024-11-04", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
 ```
 ***Atenção: Esta requisição gera o erro 409, indicando conflito pois já há um usuário cadastrado no banco de dados com o CPF informado***
 
 7. **Comando para listar todos os usuários**
 
 ```bash
-  curl http://20.57.136.155:8080/usuario/todos
+  curl http://40.90.198.227/usuario/todos
 ```
 
 8. **Comando para realizar uma segunda requisição POST para persistir dados de um novo usuário na nuvem.**
 
 ```bash
-  Invoke-RestMethod -Uri http://20.57.136.155:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "18724858048", "nomeUser": "Persistencia dados", "sobrenomeUser": "Nuvem", "telefoneUser": 1234567890, "dataNascimentoUser": "2024-11-04", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
+  Invoke-RestMethod -Uri http://40.90.198.227/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "18724858048", "nomeUser": "Persistencia dados", "sobrenomeUser": "Nuvem", "telefoneUser": 1234567890, "dataNascimentoUser": "2024-11-04", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
 ```
 
 <h2 align="left"> 🧑‍🤝‍🧑 Integrantes</h2>
