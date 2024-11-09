@@ -104,7 +104,7 @@
 8. **Comando para realizar uma segunda requisição POST para persistir dados de um novo usuário na nuvem.**
 
 ```bash
-  Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "18724858048", "nomeUser": "Persistencia dados", "sobrenomeUser": "Nuvem", "telefoneUser": 1234567890, "dataNascimentoUser": "2024-11-04", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
+  Invoke-RestMethod -Uri http://40.90.198.227:8080/usuario/criar -Method Post -Headers @{"Content-Type"="application/json"} -Body '{"cpfUser": "70094432031", "nomeUser": "Persistencia dados", "sobrenomeUser": "Nuvem", "telefoneUser": 1234567890, "dataNascimentoUser": "2024-11-04", "planoUser": "Premium", "emailUser": "maria.fogolin@example.com"}'
 ```
 
 <h2 align="left"> 🧑‍🤝‍🧑 Integrantes</h2>
