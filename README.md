@@ -25,7 +25,7 @@
 1. **URL para buscar todos os usuários**
 
 ```bash
-  http:/40.90.198.227:8080/usuario/todos
+  http://40.90.198.227:8080/usuario/todos
 ```
 
 2. **URL para buscar usuário específico**
@@ -40,7 +40,7 @@
   http://40.90.198.227:8080/usuario/criar
 
 {
-  "cpfUser": "98684948009",
+  "cpfUser": "38845260062",
   "nomeUser": "Teste fora",
   "sobrenomeUser": "Tchau VM",
   "telefoneUser": 1234567890,
@@ -86,7 +86,7 @@
 ```bash
   docker compose up
 ```
-***Atenção: Aguarde o retorno da mensagem indicando a que aplicação foi inicializada e aba um novo terminal***
+***Atenção: Aguarde o retorno da mensagem indicando a que aplicação foi inicializada e abra um novo terminal***
 
 6. **Comando para realizar uma requisição POST para criar um novo usuário no sistema**
 
